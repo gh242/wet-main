@@ -1,0 +1,67 @@
+<div class="row mt-4">
+    <!-- <div class="col-md-1"> -->
+    <div style="width:20%">
+        <h3>Barcode Invalid</h3>
+        <div id="box">
+            <!-- <img [src]="ss" alt="Image Source"> -->
+            <img [src]="selectedImg">
+        </div>
+    </div>
+    <!-- <div class="col-md-11"> -->
+    <div  style="width:80%">
+        <!-- search -->
+        <div id="searchPanel">
+            <!-- <h1>Search</h1> -->
+            <div class="form-inline d-flex">
+                <div class="form-group col-md-5 me-3">
+                    <input type="text" id="keyword" placeholder="barcode" list="suggestions" class="form-control" />
+                    <datalist id="suggestions"></datalist>
+                </div>
+                <button id="search" class="btn btn-secondary">Search</button>
+            </div>
+        </div>
+        <!-- {{posts | json}} -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <!-- <th class="col-md-1">No</th> -->
+                    <th style="width:5%">No</th>
+                    <th style="width:800px !important;">Barcode</th>
+                    <th
+                    style="width:150px !important;height: 100px;text-align: center;"
+                    >Picture</th>
+                    <!-- <th>Picture</th> -->
+                    <th style="width:8%">Emp No.</th>
+                    <!-- <th style="width:10%">Emp Name</th> -->
+                    <th style="width:20%">Stamp</th>
+                    <th style="width:5%">Repack</th>
+                    <th style="width:2%">Times</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- [class.selected]="post === selectedHero" (click)="onSelect(post)" -->
+                <!-- [ngClass]="{'selected' :post.empNo == '1111'}"  -->
+                <!-- [ngClass]="{'selected' :post.empNo === '1111'}"  -->
+                <!-- [class.selected]="post === selectedHero" -->
+                <tr *ngFor="let post of posts; let i = index" [attr.data-index]="i" class="pic"
+                [class.selected]="post === selectedHero"
+                  (click)="onSelect(post)"
+                >
+                    <!-- <td>{{post.id}}</td> -->
+                    <td>{{i+1}}</td>
+                    <td>{{post.barcode}}</td>
+                    <td style="text-align: center;vertical-align: middle;">
+                        <img [src]="post.snapShot" alt="Image Source"></td>
+                    <td>{{post.empNo}}</td>
+                    <!-- <td>{{post.empName}}</td> -->
+                    <!-- <td style="font-size:small;">{{post.realdateTime}}</td> -->
+                    <td style="font-size:small;">{{post.stamp | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                    <!-- <td><img [src]="imageSource" alt="Image Source"></td> -->
+                    <td>{{post.repack}}</td>
+                    <td>{{post.times}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>

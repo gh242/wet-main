@@ -1,0 +1,10 @@
+p{
+    width: 500px;
+    margin: auto;
+    margin-top: 250px;
+    font: 1em sans-serif;
+    font-size: 3em;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(227, 247, 247);
+}

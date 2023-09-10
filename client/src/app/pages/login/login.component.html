@@ -1,0 +1,21 @@
+<div class="mzone">
+    <div class="titleZone">
+      oo系統 請登入
+    </div>
+    <div>帳號：
+      <input 
+      class="form-control" 
+      [(ngModel)]="accountInput"
+      placeholder="帳號"
+      autofocus
+      ></div>
+    <div>密碼：
+      <input 
+      [(ngModel)]="pwInput"
+      class="form-control" 
+      placeholder="密碼"></div>
+    <button class="btn btn-success text-white mm" 
+        (click)="login()" type="submit">
+      登入
+    </button>
+  </div>

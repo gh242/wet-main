@@ -1,0 +1,9 @@
+.selected{
+    background-color: #3976f0e6;
+    border-radius: 5px;
+    /* color: white; */
+}
+.selected a{
+    /* background-color: #79a1f1; */
+    color: white;
+}

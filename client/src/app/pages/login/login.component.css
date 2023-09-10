@@ -1,0 +1,17 @@
+.mzone{
+    width: 400px;
+    margin: auto;
+    margin-top: 250px;
+}
+
+.mzone .titleZone{
+    font-size: 1.4em;
+    text-align: center;
+}
+.mzone input{
+    width: 100%;
+}
+.mzone .mm{
+    width: 100%;
+    margin-top: 20px;
+}
